@@ -13,6 +13,10 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
+
+import java.time.OffsetDateTime;
 
 
 @Entity
@@ -48,5 +52,15 @@ public class User {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "address_id")
     private Address address;
+
+    @CreatedDate
+    @Column(nullable = false,updatable = false)
+    private OffsetDateTime dateCreated;
+
+    @LastModifiedDate
+    @Column(nullable = false)
+    private OffsetDateTime lastUpdated;
+
+
 
 }
