@@ -18,10 +18,16 @@ public class Visitor {
 
     @Column(nullable = false,unique = true)
     private String phoneNumber;
+    @Column(nullable = false)
     private Address address;
+
+    @Column(nullable = false)
     private String purpose;
+    @Column(nullable = false)
     private String imageUrl;
 
+    @Column(nullable = false)
     private OffsetDateTime inTime;
+    @Column(nullable = false)
     private OffsetDateTime outTime;
 }
