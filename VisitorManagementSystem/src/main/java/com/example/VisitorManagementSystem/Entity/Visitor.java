@@ -1,11 +1,15 @@
 package com.example.VisitorManagementSystem.Entity;
 
 import jakarta.persistence.*;
-import lombok.Cleanup;
+import lombok.*;
 
 import java.time.OffsetDateTime;
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Visitor {
 
     @Id
